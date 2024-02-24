@@ -1,0 +1,4 @@
+main()
+prgm
+
+close prgm
