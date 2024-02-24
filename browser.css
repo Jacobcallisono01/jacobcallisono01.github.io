@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .address-bar {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #back, #forward {
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  #refresh-button {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  
+  #address {
+    flex: 1;
+    font-size: 16px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: calc(100vh - 50px);
+    border: none;
+  }
+  
