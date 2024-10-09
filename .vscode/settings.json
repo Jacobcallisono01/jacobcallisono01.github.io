@@ -1,0 +1,6 @@
+{
+    "anycode.language.features": {
+        "folding": true,
+        "diagnostics": true
+    }
+}
