@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" href="style.css">
+    <title>Sign up to Jacobcallisono.com</title>
+</head>
+<body>
+	<div id="topbar">
+        <div class="topbar-content">
+            <a href="../" class="home-link">Home</a>
+            <span class="beta-tag">Jacobcallisono Accounts (Beta)</span>
+        </div>
+    </div>
+    <div class="main-wrapper">
+    		<div id="loginarea">
+        <img src="../assets/images/new logo.png" alt="Jacobcallisono">
+        <p>Create an account</p>
+        <form action="../" method="post" novalidate>
+            E-mail: <input required type="email" name="email" id="mailbox" placeholder="e-mail">
+            <br>
+            Username: <input required type="text" name="username" id="userbox" placeholder="Username" minlength="3" maxlength="20">
+            <br>
+            Display name (optional): <input type="text" name="dpname" id="displaybox" placeholder="Display name" max="20">
+            <br>
+            Password: <input required type="password" name="password" id="passbox">
+            <br>
+            Confirm Password: <input required type="password" name="confirmpass" id="confirmpass">
+            <br>
+            <div class="tos-check">
+                    <input required type="checkbox" name="glnag" id="guidelineagree" switch> 
+                    <label for="guidelineagree">I agree to the <a href="privacypolicy">Privacy Policy</a> and <a href="tos">Terms of Service</a>.</label>
+                </div>
+            <span class="switch-link">Already have a Jacobcallisono account? <a href="./login.html">Log in</a>!</span>
+            <hr>
+            <button type="submit" enterkeyhint="enter">Create Account</button>
+        </form>
+        
+    </div>
+    	</div> 
+    
+</body>
+</html>
+<script src="script.js"></script>

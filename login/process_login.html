@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" href="style.css">
+    <title>Login to Jacobcallisono.com</title>
+</head>
+<body>
+	<div id="topbar">
+	<div class="topbar-content">
+            <a href="../" class="home-link">Home</a>
+            <span class="beta-tag">Jacobcallisono Accounts (Beta)</span>
+        </div>
+        	
+        </div>
+        <div class="main-wrapper">
+    <div id="loginarea">
+        <img src="../assets/images/new logo.png" alt="Jacobcallisono">
+        <p>Log in to Jacobcallisono</p>
+        <form action="./process_login" method="post">
+        <p>Processing your username/email...</p>
+        <p>Please wait...</p>
+        <br>
+        <hr>
+    	</form>
+        
+    </div>
+    </div>
+</body>
+</html>
+<script src="script.js"></script>
+<script>
+setTimeout(function() {
+    // After the delay, redirect to the dashboard or home page
+    window.location.href = "./login_2.html"; // Change this to your desired page
+}, 2000);
+</script>
