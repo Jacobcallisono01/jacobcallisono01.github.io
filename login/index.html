@@ -18,14 +18,11 @@
     <div id="loginarea">
         <img src="../assets/images/new logo.png" alt="Jacobcallisono">
         <p>Log in to Jacobcallisono</p>
-        <form action="./login_success.html" method="post">
-        	<p>Welcome, <a id="username-link">Guest</a>!</p>
-        <input type="password" name="password" id="passbox" placeholder="Password">
-        <div><a href="./forgot_password" style="float: left;">Forgot Password?</a></div>
+        <form action="./process_login" method="post">
+        <p>Loading login...</p>
+        <p>Please wait...</p>
         <br>
         <hr>
-        <button type="button" enterkeyhint="previous" onclick="window.location.href = 'login.html';">< Back</button>
-        <button type="submit" enterkeyhint="next" onclick="location.href = 'login_success';">Log In</button>
     	</form>
         
     </div>
@@ -33,3 +30,9 @@
 </body>
 </html>
 <script src="script.js"></script>
+<script>
+setTimeout(function() {
+    // After the delay, redirect to the dashboard or home page
+    window.location.href = "login"; // Change this to your desired page
+}, 100);
+</script>
