@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<link rel="stylesheet" href="style.css">
+    	<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    	<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
     <title>Sign up to Jacobcallisono.com</title>
 </head>
 <body>
@@ -24,9 +26,9 @@
             <br>
             Display name (optional): <input type="text" name="dpname" id="displaybox" placeholder="Display name" max="20">
             <br>
-            Password: <input required type="password" name="password" id="passbox">
+            Password: <input required type="password" name="password" id="passbox1">
             <br>
-            Confirm Password: <input required type="password" name="confirmpass" id="confirmpass">
+            Confirm Password: <input required type="password" name="confirmpass" id="passbox2">
             <br>
             <div class="tos-check">
                     <input required type="checkbox" name="glnag" id="guidelineagree" switch> 
@@ -39,7 +41,7 @@
         
     </div>
     	</div> 
-    
+    <noscript>Uhh... I think you need JavaScript in order for you to log in...</noscript>
 </body>
 </html>
 <script src="script.js"></script>

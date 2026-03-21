@@ -1,29 +1,54 @@
 // script.js
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "YOUR_API_KEY_HERE",
+    authDomain: "jacobcallisono-accounts.firebaseapp.com",
+    projectId: "jacobcallisono-accounts",
+    storageBucket: "jacobcallisono-accounts.appspot.com",
+    messagingSenderId: "YOUR_ID",
+    appId: "YOUR_APP_ID"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Create a shortcut for the Auth service
+const auth = firebase.auth();
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- SIGN UP LOGIC ---
+    // Get form elements
     const signupForm = document.querySelector('form');
-    
-    if (signupForm && window.location.pathname.includes('signup')) {
-        signupForm.addEventListener('submit', (e) => {
-            // Get the two password fields
-            const password = document.querySelector('input[name="password"]').value;
-            // Here we grab the second password field by its name attribute
-            const confirmPassword = document.querySelector('input[name="confirmpass"]').value;
-            const guidelinesChecked = document.getElementById('guidelineagree').checked;
+    const emailInput = document.getElementById('mailbox');
+    const passwordInput = document.getElementById('passbox1');
+    const confirmPasswordInput = document.getElementById('passbox2');
 
-            if (password !== confirmPassword) {
-                e.preventDefault(); // Stop the form from submitting
-                alert("Passwords do not match.");
-            } else if (!guidelinesChecked) {
-                e.preventDefault();
-                alert("You must agree to the Privacy Policy and Terms of Service.");
-            } else {
-                console.log("Validation passed! Preparing to sync to Jacobcallisono Backend...");
-                // The form will now submit to "../" as defined in your action attribute
-            }
+    signupForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Stop the page from refreshing
+
+        const email = emailInput.value;
+        const password = passwordInput.value;
+
+        // Check if passwords match
+        if (password !== confirmPasswordInput.value) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        // Firebase Create User
+        auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            // Signed in!
+            console.log("Success! Account created. Welcome to Jacobcallisono!");
+            window.location.href = "../"; // Send them back to the homepage
+        })
+        .catch((error) => {
+            // Handle Errors (like email already exists)
+            alert("Error: " + error.message);
         });
-    }
+    });
 
     // --- LOGIN LOGIC ---
     // If we are on the login page (which currently doesn't have a <form> tag)
@@ -36,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 alert("Please enter your Jacobcallisono username or e-mail.");
             } else {
-                console.log("Attempting to log into Jacobcallisono OS ecosystem for:", userBox.value);
+                console.log("Attempting to log as ", userBox.value);
                 // Here is where you would normally use fetch() to send the login request to your server
             }
         });
