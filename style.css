@@ -157,3 +157,40 @@ hr {
     display: block;
     margin-top: 10px;
 }
+.nametag-sakura {
+    background: linear-gradient(#ffccfc, #ee0979);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+
+}
+
+.banner-sakura {
+    background: linear-gradient(to right, #ffccfc, #ee0979);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.avatar-sakura {
+    border: 2px solid #ee0979;
+    border-radius: 50%;
+    padding: 3px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.theme-sakura {
+    background: linear-gradient(to right, #ffccfc, #ee0979);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
